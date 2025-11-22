@@ -1,0 +1,34 @@
+/* Hacemos que el contenedor ocupe toda la pantalla */
+.main-container {
+  display: flex;          /* Alinea los hijos en fila (uno al lado del otro) */
+  height: 100vh;         /* 100% de la altura de la ventana (viewport height) */
+  width: 100%;
+  font-family: sans-serif;
+  color: white;          /* Texto blanco general */
+  background-color: #1e1e1e; /* Fondo oscuro base */
+}
+
+/* Estilo para la Columna 1 (Botones) */
+.col-interaction {
+  width: 80px;           /* Ancho fijo y delgado */
+  background-color: #000000; /* Más oscuro, como en la imagen */
+  border-right: 1px solid #444;
+  display: flex;
+  justify-content: center;
+}
+
+/* Estilo para la Columna 2 (Menú) */
+.col-menu {
+  width: 250px;          /* Ancho fijo para el menú */
+  background-color: #121212;
+  border-right: 1px solid #444;
+  padding: 20px;
+}
+
+/* Estilo para la Columna 3 (Contenido) */
+.col-content {
+  flex-grow: 1;          /* Ocupa todo el espacio restante */
+  background-color: #1e1e1e;
+  padding: 40px;
+  overflow-y: auto;      /* Si el contenido es largo, permite scroll */
+}

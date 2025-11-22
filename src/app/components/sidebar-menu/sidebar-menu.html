@@ -1,0 +1,42 @@
+<div class="menu-container">
+  
+  <h2 class="menu-title">{{ currentTitle() }}</h2>
+  
+  <nav class="options-list">
+    @for (option of menuOptions(); track option.label) {
+      
+      @if (option.path && option.path.includes('ficha')) {
+      
+          @let fichaId = option.label.split(' ')[1]; 
+          
+          <div 
+            class="menu-item"
+            [class.active]="isActive(option)"
+        
+            (click)="selectOption(option)" 
+            
+          
+            [routerLink]="['/ficha', fichaId]" 
+          >
+            <span>{{ option.label }}</span>
+          </div>
+      } 
+      
+   
+      @if (!option.path || !option.path.includes('ficha')) {
+          <div 
+            class="menu-item"
+            [class.active]="isActive(option)"
+            
+            (click)="selectOption(option)"
+            
+           
+            [routerLink]="option.path ? option.path : null" 
+          >
+            <span>{{ option.label }}</span>
+          </div>
+      }
+    }
+  </nav>
+
+</div>

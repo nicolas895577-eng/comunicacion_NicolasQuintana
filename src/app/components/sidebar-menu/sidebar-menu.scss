@@ -1,0 +1,46 @@
+.menu-container {
+  height: 100%;
+}
+
+.menu-title {
+  color: #888;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #333;
+}
+
+.options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.menu-item {
+  color: #ccc;
+  padding: 8px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+  font-size: 0.95rem;
+
+  &:hover {
+    background-color: #333;
+    color: white;
+  }
+
+  &.active {
+    
+    background-color: #007bff; 
+    color: white;
+    font-weight: 600;
+  }
+  
+  
+  span {
+    text-decoration: none;
+    color: inherit;
+  }
+}
